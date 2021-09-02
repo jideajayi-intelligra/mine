@@ -1,11 +1,18 @@
-import { Provider } from 'react-redux';
-import { store, persistor } from "./redux/store";
-import { PersistGate } from 'redux-persist/integration/react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-
+      <Router>
+        <Switch>
+          <Route path="/">
+            {/* Home */}
+          </Route>
+          <Route path="*">
+            {/* 404 */}
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
