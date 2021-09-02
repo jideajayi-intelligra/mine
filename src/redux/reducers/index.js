@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import storage from 'redux-persist/lib/storage';
-import { ActionTypes } from '../constants/action-typess';
+import { ActionTypes } from '../constants/action-types';
 
 
 const reducers = combineReducers({
@@ -12,7 +12,6 @@ const rootReducer = (state, action) => {
         // for all keys defined in your persistConfig(s)
         storage.removeItem('persist:root')
         // storage.removeItem('persist:otherKey')
-
         state = undefined;
     }
     return reducers(state, action);
